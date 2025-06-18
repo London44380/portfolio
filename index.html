@@ -1,74 +1,102 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Portfolio</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-    .w3-row-padding img {margin-bottom: 12px}
-    /* Set the width of the sidebar to 120px */
-    .w3-sidebar {width: 120px;background: #222;}
-    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-    #main {margin-left: 120px}
-    /* Remove margins from "page content" on small screens */
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>London | Portfolio</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-sidebar {width: 140px;background: #111;}
+    #main {margin-left: 140px}
     @media only screen and (max-width: 600px) {#main {margin-left: 0}}
-    </style>
-  </head>
+    .skill-box {margin-bottom: 16px; padding: 12px; background: #222; border-left: 4px solid #00ff00; border-radius: 6px;}
+    .section-title {margin-top: 48px; color: #4db8ff; font-weight: bold;}
+  </style>
+</head>
 <body class="w3-black">
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<!-- Sidebar -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#skills" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-cogs w3-xxlarge"></i>
+    <p>SKILLS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
 </nav>
-
-
-</div>
 
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">My Portfolio</span> </h1>
-
+  <!-- Home -->
+  <header class="w3-container w3-padding-32 w3-center" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">London</span> | Cybersecurity Portfolio</h1>
+    <p>Ethical Hacker | OSINT Specialist | Security Enthusiast</p>
   </header>
-    
+
+  <!-- About Section -->
+  <div class="w3-content" id="about">
+    <h2 class="section-title">Who am I</h2>
+    <p>My name is Brandon, based in France. I have been passionate about computers since childhood. For 15 years, cybersecurity has been a refuge and a field of constant exploration for me.</p>
+  </div>
+
+  <!-- Skills Section -->
+  <div class="w3-content" id="skills">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skill-box">
+      <strong>Network Security</strong><br>
+      Mastery of router configuration, VPNs, DNS adjustments, and firewall rules (UFW, Fail2Ban). I regularly perform internal audits, scan for open ports and vulnerable services using tools like Nmap and Wireshark, and ensure segmentation of sensitive networks. I prioritize hardening both consumer-grade and VPS-based infrastructures.
     </div>
-
-  </div>
-  
-  <!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-light-grey">Who am I :</h2>
-
-    <h2 class="w3-text-light-grey">My name is Brandon, I live in France, I've been passionate about computers since childhood, I trained in cybersecurity as a self-taught person for 15 years, it was a refuge for me.</h2>
-
-    <h2 class="w3-text-light-grey">My Skills :</h2>
-
-    <h2 class="w3-text-light-grey">Network Security </h2>
-    <h2 class="w3-text-light-grey">Data Security </h2>
-    <h2 class="w3-text-light-grey">Endpoint Security </h2>
-    <h2 class="w3-text-light-grey">Mobile Security </h2>
-    <h2 class="w3-text-light-grey">Social Media Safety </h2>
-    <h2 class="w3-text-light-grey">OSINT </h2>
-
-    <h2 class="w3-text-light-grey">My English is functional in a professional context.</h2>
-
-    <h2 class="w3-text-light-grey">Contact : </h2>
-    <h2 class="w3-text-light-grey">brandon282859@protonmail.com </h2>
-    <hr style="width:200px" class="w3-opacity">
-
+    <div class="skill-box">
+      <strong>Data Security</strong><br>
+      Encryption of internal/external partitions, secure file transfers, backup strategies, and data recovery from formatted drives. I apply integrity checks and work with hash validation.
     </div>
-  <!-- End Portfolio Section -->
+    <div class="skill-box">
+      <strong>Endpoint & System Security</strong><br>
+      OS hardening on Linux and Windows, sandbox use, reducing attack surface, and managing user privilege separation.
+    </div>
+    <div class="skill-box">
+      <strong>Mobile & Social Media Security</strong><br>
+      Risk identification, privacy enhancement, and user awareness campaigns across popular platforms. I secure mobile systems against data leaks and apply secure authentication policies.
+    </div>
+    <div class="skill-box">
+      <strong>OSINT</strong><br>
+      Proficient with Sherlock, Maltego, Shodan. I conduct investigations based solely on publicly available data, always within legal and ethical boundaries.
+    </div>
+    <div class="skill-box">
+      <strong>Ethical Hacking</strong><br>
+      I design and execute controlled simulations to test systems, using tools like Hydra, Slowloris, and credential stuffing techniques in lab environments only. My work includes vulnerability enumeration, phishing scenario creation, and defense bypass analysis — always for educational and defensive purposes. My philosophy is rooted in the "gray hat with white ethics" approach: knowledge for defense, not destruction.
+    </div>
+    <div class="skill-box">
+      <strong>Development & Automation</strong><br>
+      HTML and Python projects designed with AI support. I create secure automation scripts, web interfaces, and data analysis tools with a focus on usability and safety.
+    </div>
+    <p>My English is functional for technical discussions and collaborative work.</p>
   </div>
 
+  <!-- Contact Section -->
+  <div class="w3-content" id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>You can reach me at:</p>
+    <p><strong>Email:</strong> brandon282859@protonmail.com</p>
   </div>
 
-</footer>
-
-<!-- END PAGE CONTENT -->
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-center">
+    <p>This portfolio is for educational and ethical cybersecurity purposes only. No illegal activity is endorsed or represented.</p>
+  </footer>
 </div>
 
 </body>
