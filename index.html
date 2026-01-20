@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London | Portfolio</title>
+    <meta name="description" content="Red Hat | Ethical offensive research, network & data security. In umbra pro lumine.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        matrixGreen: '#00FF41',
+                        redHat: '#D7263D',
+                        redDark: '#8B1424',
+                        charcoal: '#111216',
+                        steel: '#2A2D33'
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: #000; overflow-x: hidden; }
+        #matrix-canvas { position: fixed; top: 0; left: 0; z-index: -1; }
+        .glitch { animation: glitch 0.8s infinite; }
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            15% { transform: translate(-3px, 3px); }
+            30% { transform: translate(2px, -2px); }
+            45% { transform: translate(-2px, 2px); }
+            60% { transform: translate(3px, -1px); }
+            75% { transform: translate(-1px, -3px); }
+        }
+        .halo { background: radial-gradient(50% 50% at 60% 0%, rgba(0,255,65,0.15), transparent 60%), radial-gradient(35% 35% at 100% 10%, rgba(215,38,61,0.20), transparent 60%); }
+        .matrix-shadow { box-shadow: 0 20px 60px rgba(0,255,65,0.3); }
+        .parallax { transition: transform 0.3s ease-out; }
+    </style>
+</head>
+<body class="min-h-screen text-[#F4F1EC] font-inter bg-gradient-to-br from-charcoal to-steel">
+    <canvas id="matrix-canvas"></canvas>
+
+    
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-charcoal/90 border-b border-matrixGreen/20">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#home" class="flex items-center gap-3 font-montserrat text-2xl font-black">
+                <span class="text-redHat glitch">London</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-lg opacity-85 hover:text-matrixGreen hover:matrix-shadow transition-all px-3 py-2 rounded-lg">Home</a>
+                <a href="#about" class="text-lg opacity-85 hover:text-matrixGreen hover:matrix-shadow transition-all px-3 py-2 rounded-lg">About</a>
+                <a href="#skills" class="text-lg opacity-85 hover:text-matrixGreen hover:matrix-shadow transition-all px-3 py-2 rounded-lg">Skills</a>
+                <a href="#contact" class="text-lg opacity-85 hover:text-matrixGreen hover:matrix-shadow transition-all px-3 py-2 rounded-lg">Contact</a>
+            </nav>
+            <button id="mobile-toggle" class="md:hidden text-2xl p-2 rounded-lg hover:bg-steel/50 transition-all">☰</button>
+        </div>
+    </header>
+
+    
+    <section id="home" class="relative min-h-screen flex items-center justify-center p-8 md:p-24 overflow-hidden parallax halo">
+        <div class="max-w-4xl mx-auto text-center z-10">
+            <span class="inline-block font-semibold uppercase tracking-widest text-[#9AA0A6] border border-white/20 px-4 py-2 rounded-full text-sm mb-8">Idealist Red Hat</span>
+            <h1 class="font-montserrat text-5xl md:text-7xl lg:text-[5rem] leading-tight mb-8">
+                <span class="bg-gradient-to-r from-redHat to-redDark bg-clip-text text-transparent font-black glitch">London</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto opacity-95 leading-relaxed">
+                Ethical Hacker · Network Security Specialist. I reveal to protect: ethical offensive research, controlled testing, responsible disclosure.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#skills" class="btn-primary px-12 py-6 font-semibold rounded-xl matrix-shadow hover:scale-105 transition-all transform">View my skills</a>
+                <a href="#contact" class="btn-secondary px-12 py-6 font-semibold border-2 border-white/30 rounded-xl hover:bg-matrixGreen/20 hover:border-matrixGreen transition-all hover:scale-105">Contact me</a>
+            </div>
+            <p class="mt-12 text-sm opacity-75 italic">In umbra pro lumine</p>
+        </div>
+    </section>
+
+    
+    <section id="about" class="py-24 md:py-32 px-8 md:px-16">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-montserrat text-4xl md:text-5xl font-black mb-12 text-center glitch">About me</h2>
+            <p class="text-xl leading-relaxed mb-8 opacity-95 max-w-3xl mx-auto text-center">
+                My name is Brandon, based in France. I have been passionate about computers since childhood. 
+                For nearly 15 years, cybersecurity has been a refuge and a field of constant exploration for me.
+            </p>
+            <p class="text-lg opacity-75 italic text-center max-w-2xl mx-auto font-mono bg-steel/50 p-6 rounded-2xl border border-white/10">
+                Motto: <span class="text-matrixGreen font-bold glitch">In umbra pro lumine</span> — act discreetly, for the light.
+            </p>
+        </div>
+    </section>
+
+    
+    <section id="skills" class="py-24 md:py-32 px-8 md:px-16 bg-charcoal/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-montserrat text-4xl md:text-5xl font-black mb-20 text-center glitch">My Skills</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="card bg-steel/60 backdrop-blur-md border border-white/10 rounded-3xl p-10 hover:border-matrixGreen/50 hover:bg-matrixGreen/10 transition-all duration-500 hover-glow hover:-translate-y-4">
+                    <h3 class="font-bold text-2xl mb-6 flex items-center gap-3">
+                        <span class="text-matrixGreen text-3xl">🌐</span> Network Security
+                    </h3>
+                    <p class="text-lg leading-relaxed opacity-95">
+                        Mastery of router configuration, VPNs, DNS adjustments, and firewall rules (UFW, Fail2Ban). 
+                        Internal audits, Nmap, Wireshark, ZAP scans, sensitive network segmentation. 
+                        Hardening consumer-grade & VPS infrastructures.
+                    </p>
+                </article>
+
+                <article class="card bg-steel/60 backdrop-blur-md border border-white/10 rounded-3xl p-10 hover:border-matrixGreen/50 hover:bg-matrixGreen/10 transition-all duration-500 hover-glow hover:-translate-y-4">
+                    <h3 class="font-bold text-2xl mb-6 flex items-center gap-3">
+                        <span class="text-matrixGreen text-3xl">🔒</span> Data Security
+                    </h3>
+                    <p class="text-lg leading-relaxed opacity-95">
+                        Encryption of internal/external partitions, secure file transfers, backup strategies, 
+                        data recovery from formatted drives. Integrity checks & hash validation.
+                    </p>
+                </article>
+
+                <article class="card bg-steel/60 backdrop-blur-md border border-white/10 rounded-3xl p-10 hover:border-matrixGreen/50 hover:bg-matrixGreen/10 transition-all duration-500 hover-glow hover:-translate-y-4">
+                    <h3 class="font-bold text-2xl mb-6 flex items-center gap-3">
+                        <span class="text-matrixGreen text-3xl">💻</span> Endpoint & System Security
+                    </h3>
+                    <p class="text-lg leading-relaxed opacity-95">
+                        OS hardening on Linux/Windows, VM use, attack surface reduction, 
+                        user privilege separation management.
+                    </p>
+                </article>
+
+                <article class="card bg-steel/60 backdrop-blur-md border border-white/10 rounded-3xl p-10 hover:border-matrixGreen/50 hover:bg-matrixGreen/10 transition-all duration-500 hover-glow hover:-translate-y-4">
+                    <h3 class="font-bold text-2xl mb-6 flex items-center gap-3">
+                        <span class="text-matrixGreen text-3xl">📱</span> Mobile & Social Media Security
+                    </h3>
+                    <p class="text-lg leading-relaxed opacity-95">
+                        Risk identification, privacy enhancement, user awareness campaigns. 
+                        Mobile systems security against data leaks, secure authentication policies.
+                    </p>
+                </article>
+
+                <article class="card bg-steel/60 backdrop-blur-md border border-white/10 rounded-3xl p-10 hover:border-matrixGreen/50 hover:bg-matrixGreen/10 transition-all duration-500 hover-glow hover:-translate-y-4">
+                    <h3 class="font-bold text-2xl mb-6 flex items-center gap-3">
+                        <span class="text-matrixGreen text-3xl">🔍</span> OSINT
+                    </h3>
+                    <p class="text-lg leading-relaxed opacity-95">
+                        Proficient with <strong>Sherlock, Maltego, Censys, Shodan, Google Dorking</strong>. 
+                        Public data investigations, always legal & ethical boundaries.
+                    </p>
+                </article>
+
+                <article class="card bg-steel/60 backdrop-blur-md border border-white/10 rounded-3xl p-10 hover:border-matrixGreen/50 hover:bg-matrixGreen/10 transition-all duration-500 hover-glow hover:-translate-y-4">
+                    <h3 class="font-bold text-2xl mb-6 flex items-center gap-3">
+                        <span class="text-redHat text-3xl glitch">⚔️</span> Ethical Hacking
+                    </h3>
+                    <p class="text-lg leading-relaxed opacity-95">
+                        Controlled simulations: <strong>Hydra, slowloris, WiFi/Bluetooth hacking, credential stuffing</strong> 
+                        (lab only). Vulnerability enumeration, phishing scenarios, defense bypass analysis. 
+                        <em>"Gray hat with black" philosophy: knowledge for defense.</em>
+                    </p>
+                </article>
+
+                <article class="card bg-steel/60 backdrop-blur-md border border-white/10 rounded-3xl p-10 hover:border-matrixGreen/50 hover:bg-matrixGreen/10 transition-all duration-500 hover-glow hover:-translate-y-4">
+                    <h3 class="font-bold text-2xl mb-6 flex items-center gap-3">
+                        <span class="text-matrixGreen text-3xl">⚙️</span> Development & Automation
+                    </h3>
+                    <p class="text-lg leading-relaxed opacity-95">
+                        AI-supported projects: <strong>Python, Kotlin, Ruby, Rust, HTML, C#, C++</strong> code understanding & automation.
+                    </p>
+                </article>
+
+                <article class="card bg-steel/60 backdrop-blur-md border border-white/10 rounded-3xl p-10 hover:border-matrixGreen/50 hover:bg-matrixGreen/10 transition-all duration-500 hover-glow hover:-translate-y-4">
+                    <h3 class="font-bold text-2xl mb-6 flex items-center gap-3">
+                        <span class="text-matrixGreen text-3xl">🌍</span> Languages
+                    </h3>
+                    <p class="text-lg leading-relaxed opacity-95">
+                        B1 English (spoken), C1 (cybersecurity writing). Français natif.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="py-24 md:py-32 px-8 md:px-16">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="font-montserrat text-4xl md:text-6xl font-black mb-12 glitch">Contact</h2>
+            <p class="text-xl mb-12 opacity-90">You can reach me at:</p>
+            <div class="space-y-6 mb-16">
+                <a href="mailto:brandon282859@protonmail.com" class="block text-2xl font-mono bg-steel/60 p-8 rounded-2xl border-2 border-matrixGreen/30 hover:border-matrixGreen hover:bg-matrixGreen/10 transition-all hover-glow text-left hover:-translate-y-2">
+                    brandon282859@protonmail.com
+                </a>
+            </div>
+            <div class="bg-steel/50 backdrop-blur-md p-10 rounded-3xl border border-white/10">
+                <p class="text-lg opacity-80 mb-6">
+                    <em>This portfolio is for educational and ethical cybersecurity purposes only. No illegal activity is endorsed or represented.</em>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-8 md:px-16 border-t border-white/10 text-center opacity-75">
+        <div class="max-w-4xl mx-auto">
+            © <span id="year"></span> London 
+            <span class="text-xs font-mono block mt-2">In umbra pro lumine</span>
+        </div>
+    </footer>
+
+    <script>
+        
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+        const fontSize = 12;
+        const cols = canvas.width / fontSize;
+        const drops = Array(Math.floor(cols)).fill(1);
+
+        function draw() {
+            ctx.fillStyle = 'rgba(0,0,0,0.02)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'rgba(0,255,65,0.1)';
+            ctx.font = `${fontSize}px monospace`;
+            for (let i = 0; i < drops.length; i++) {
+                const text = chars[Math.floor(Math.random() * chars.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.99) drops[i] = 0;
+                drops[i]++;
+            }
+        }
+        setInterval(draw, 80);
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        
+        document.getElementById('mobile-toggle').addEventListener('click', () => {
+            alert('Navigation: Home | About | Skills | Contact');
+        });
+
+        
+        document.addEventListener('mousemove', e => {
+            const hero = document.querySelector('#home');
+            const x = (window.innerWidth / 2 - e.clientX) / 30;
+            const y = (window.innerHeight / 2 - e.clientY) / 30;
+            hero.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    </script>
+</body>
+</html>
